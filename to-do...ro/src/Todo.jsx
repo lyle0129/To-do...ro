@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import {useSound} from 'use-sound';
 
+import doneSfx from './music/done.mp3';   // adjust path to your file
+import deleteSfx from './music/delete.mp3';
+
 function Todo(){
 
     const [tasks, setTasks] = useState(["do laundry","fold clothes"]);
@@ -9,6 +12,10 @@ function Todo(){
 
     const [editingIndex, setEditingIndex] = useState(null);
     const [editValue, setEditValue] = useState(""); 
+
+    // load sounds
+    const [playDone] = useSound(doneSfx, { volume: 0.5 });
+    const [playDelete] = useSound(deleteSfx, { volume: 0.5 });
 
     function handleInputChange (event) {
         setNewTask(event.target.value);
@@ -24,11 +31,13 @@ function Todo(){
     }
 
     function deleteTask (index){
+        playDelete(); 
         const updatedTasks = tasks.filter((_ ,i) => i !== index)
         setTasks(updatedTasks);
     }
 
     function completeTask (index){
+        playDone(); 
         const taskCompleted = tasks[index];
         setAccomplishedTasks(a => [...a, taskCompleted] );
         const updatedTasks = tasks.filter((_ ,i) => i !== index)

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {useSound} from 'use-sound';
 
+import doneTimer from './music/pomodone.mp3'
+import yaLikeJazz from './music/jazz.mp3'
+
 function Pomodoro(){
     const workDuration = 25 * 60; // 25 minutes in seconds
     const shortbreakDuration = 5 * 60; // 5 minutes in seconds
@@ -39,6 +42,8 @@ function Pomodoro(){
 
     
     // TODO: Jazz Sound playing when work
+    const [playDonePomo] = useSound(doneTimer, { volume: 0.5 });
+    const [playJazz, { stop: stopJazz }] = useSound(yaLikeJazz, { volume: 0.05 });
 
     // --- Format seconds -> MM:SS ---
     const formatTime = (seconds) => {
@@ -56,7 +61,9 @@ function Pomodoro(){
         timer = setInterval(() => {
             setTimeLeft((prev) => prev - 1);
         }, 1000);
+
         } else if (timeLeft === 0) {
+            stopJazz();
             if (isWorkSession){
                 let newCount = pomodoroCount;
                 console.log(newCount);
@@ -78,10 +85,20 @@ function Pomodoro(){
                 setDisplayCount(pomodoroCount);
                 setIsRunning(false);
             }
+            playDonePomo();
         }
         return () => clearInterval(timer);
     }, [isRunning, timeLeft, isWorkSession, longbreakDuration, shortbreakDuration, workDuration, pomodoroCount]);
 
+    // --- Handle jazz playback separately ---
+    useEffect(() => {
+        if (isRunning && isWorkSession) {
+        playJazz();   // start jazz when work starts
+        } else {
+        stopJazz();   // stop jazz if paused or on break
+        }
+    }, [isRunning, isWorkSession, playJazz, stopJazz]);
+    
     return(
         <div className="pomodoro-container">
         <h1 className="pomodoro-title">
