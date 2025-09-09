@@ -27,7 +27,9 @@ ______________________________________________________________________________
 Clone the repo and install dependencies:
 
 git clone https://github.com/<your-username>/to-doro.git
+
 cd to-doro
+
 npm install
 
 
