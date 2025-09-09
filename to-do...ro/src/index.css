@@ -1,0 +1,90 @@
+body{
+  font-family: Arial, Sans-serif;
+}
+
+.pomodoro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pomodoro-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.pomodoro-timer {
+  font-size: 4rem;
+  font-family: monospace;
+  margin-bottom: 24px;
+}
+
+.pomodoro-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.pomodoro-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.pomodoro-button.start {
+  background-color: hsl(142, 71%, 45%); /* green */
+}
+
+.pomodoro-button.start:hover {
+  background-color: hsl(142, 76%, 35%);
+  scale: 110%;
+}
+
+.pomodoro-button.pause {
+  background-color: hsl(45, 93%, 50%); /* yellow */
+}
+
+.pomodoro-button.pause:hover {
+  background-color: hsl(41, 96%, 40%);
+  scale: 110%;
+}
+
+.pomodoro-button.reset {
+  background-color: hsl(0, 84%, 60%); /* red */
+}
+
+.pomodoro-button.reset:hover {
+  background-color: hsl(0, 72%, 50%);
+  scale: 110%;
+}
+
+.pomodoro-mode {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  margin: 0px 4px; 
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.pomodoro-mode.work,.pomodoro-mode.shortBreak,.pomodoro-mode.longBreak{
+  background-color: hsl(277, 57%, 50%);
+}
+
+.pomodoro-mode.work:hover,.pomodoro-mode.shortBreak:hover,.pomodoro-mode.longBreak:hover{
+  background-color: hsl(277, 57%, 40%);
+  scale: 110%;
+}
+
