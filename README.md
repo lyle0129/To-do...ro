@@ -9,7 +9,7 @@ ______________________________________________________________________________
 
 A pomodo x todo app to aid with upskilling in coding in ReactJS.
 
-![To-doro Logo](./assets/logo.png)
+![To-doro Logo](./to-do...ro/public/mylogo.png)
 
 ______________________________________________________________________________
 
