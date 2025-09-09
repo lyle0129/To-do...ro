@@ -20,13 +20,13 @@ body{
 }
 
 .pomodoro-title {
-  font-size: 5vh;
+  font-size: 5rem;
   font-weight: bold;
   margin-bottom: 16px;
 }
 
 .pomodoro-timer {
-  font-size: 18vh;
+  font-size: 18rem;
   font-family: monospace;
   margin-bottom: 24px;
 }

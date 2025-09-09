@@ -44,11 +44,7 @@ function Todo(){
         setTasks(updatedTasks);
     }
 
-    function editTask (index){
-        //how will i add this?
-        setNewTask
-    }
-
+    
     return(
         <>
         <div className="todo-container">

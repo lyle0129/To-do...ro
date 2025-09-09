@@ -88,7 +88,7 @@ function Pomodoro(){
             playDonePomo();
         }
         return () => clearInterval(timer);
-    }, [isRunning, timeLeft, isWorkSession, longbreakDuration, shortbreakDuration, workDuration, pomodoroCount]);
+    }, [isRunning, timeLeft, isWorkSession, longbreakDuration, shortbreakDuration, workDuration, pomodoroCount, playDonePomo, playJazz, stopJazz]);
 
     // --- Handle jazz playback separately ---
     useEffect(() => {
