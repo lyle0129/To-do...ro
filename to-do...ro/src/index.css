@@ -1,3 +1,6 @@
+
+/* ---------- CSS for Pomodoro ---------- */
+
 body{
   font-family: Arial, Sans-serif;
 }
@@ -8,20 +11,21 @@ body{
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background-color: #1a1a1a;
+  background-color: hsl(0, 0%, 10%);
   color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 16px 16px 0 0 ;
+  box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.3);
+  height: 50vh;
 }
 
 .pomodoro-title {
-  font-size: 1.5rem;
+  font-size: 5vh;
   font-weight: bold;
   margin-bottom: 16px;
 }
 
 .pomodoro-timer {
-  font-size: 4rem;
+  font-size: 18vh;
   font-family: monospace;
   margin-bottom: 24px;
 }
@@ -32,6 +36,8 @@ body{
 }
 
 .pomodoro-button {
+  width: 200px;
+  height: 50px;
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
@@ -68,11 +74,18 @@ body{
   scale: 110%;
 }
 
+.pomodoro-modes {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+}
+
 .pomodoro-mode {
+  width: 200px;
+  height: 50px;
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
-  margin: 0px 4px; 
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -88,3 +101,144 @@ body{
   scale: 110%;
 }
 
+/* ---------- CSS for Todo ---------- */
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background-color: hsl(0, 0%, 10%);
+  color: white;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.3);
+
+}
+
+.todo-status {
+  font-size: 3vh;
+  font-weight: bold;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  width: 90vw;
+  text-align: center;
+  background-color: hsl(277, 57%, 50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.task-forms {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  width: 90vw;
+}
+
+.task-forms input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 80vw;
+}
+
+.edit-text {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 60vw;
+}
+
+.add-button {
+  width: 10vw;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(142, 71%, 45%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.add-button:hover {
+  background-color: hsl(142, 76%, 35%);
+  scale: 110%;
+}
+
+.tasks ol, .done-tasks ol {
+  padding: 0;
+  margin: 0;
+  width: 90%;
+}
+
+.tasks li, .done-tasks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 15%);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  width: 90vw;
+}
+
+.tasks li span, .done-tasks li span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.tasks button, .done-tasks button {
+  width: 50px;
+  height: 40px;
+  margin-left: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.delete-button {
+  background-color: hsl(0, 79%, 70%);
+  color: white;
+}
+.delete-button:hover {
+  background-color: hsl(0, 72%, 60%);
+  scale: 110%;
+}
+
+.edit-button {
+  background-color: hsl(45, 92%, 66%);
+  color: black;
+}
+.edit-button:hover {
+  background-color: hsl(41, 96%, 40%);
+  color: white;
+  scale: 110%;
+}
+
+.done-button , .save-button{
+  background-color: hsl(142, 46%, 54%);
+  color: white;
+}
+.done-button:hover , .save-button:hover {
+  background-color: hsl(142, 76%, 35%);
+  scale: 110%;
+}
+
+.done-tasks h2 {
+  font-size: 1.2rem;
+  margin: 16px 0 8px;
+  text-align: center;
+  color: hsl(142, 71%, 65%);
+}

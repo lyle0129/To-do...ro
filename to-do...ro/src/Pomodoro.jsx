@@ -119,7 +119,7 @@ function Pomodoro(){
             Reset
             </button>
         </div>
-        <div className="pomodoro-mode">
+        <div className="pomodoro-modes">
             <button
             className="pomodoro-mode work"
             onClick={setWorkSession}
