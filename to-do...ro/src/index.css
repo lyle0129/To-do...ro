@@ -243,3 +243,78 @@ body{
   text-align: center;
   color: hsl(142, 71%, 65%);
 }
+
+/* ---------- Mobile Responsive Styles ---------- */
+@media (max-width: 768px) {  /* Tablets & smaller */
+  .pomodoro-container {
+    height: auto;
+    padding: 16px;
+  }
+
+  .pomodoro-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .pomodoro-timer {
+    font-size: 8rem; /* smaller so it fits */
+    text-align: center;
+  }
+
+  .pomodoro-buttons,
+  .pomodoro-modes {
+    flex-direction: column; /* stack vertically */
+    width: 100%;
+    gap: 8px;
+  }
+
+  .pomodoro-button,
+  .pomodoro-mode {
+    width: 100%;   /* full width on mobile */
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .todo-status {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .task-forms {
+    flex-direction: column; /* stack input & button */
+    width: 100%;
+  }
+
+  .task-forms input,
+  .edit-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .add-button {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .tasks li, .done-tasks li {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .tasks button, .done-tasks button {
+    width: 100%;
+    margin: 4px 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {  /* Small phones */
+  .pomodoro-title {
+    font-size: 2rem;
+  }
+
+  .pomodoro-timer {
+    font-size: 5rem;
+  }
+}
