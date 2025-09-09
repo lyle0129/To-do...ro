@@ -17,8 +17,9 @@ ______________________________________________________________________________
 
 👉 [Check out To-doro here](https://to-doro.vercel.app/)
 
-** Note: I sincerely hope you just clone the repo and run the app locally instead
-because I might deplete my vercel limits if you use the app through it. **
+** Note: I sincerely hope you just clone the repo and run the app locally instead 
+if you plan on using it for long time because I might deplete my vercel limits
+if you use the app through it. **
 
 ______________________________________________________________________________
 
